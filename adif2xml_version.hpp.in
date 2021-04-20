@@ -1,0 +1,9 @@
+#ifndef ADIF2XML_VERSION_HPP
+#define ADIF2XML_VERSION_HPP
+
+#define APP_NAME      "ADIF2XML"
+#define APP_VERSION   "@ADIF2XML_VERSION@"
+#define APP_COPYRIGHT "Tania Hagn (DF9RY)"
+#define APP_WEBSITE   "https://df9ry.de"
+
+#endif // ADIF2XML_VERSION_HPP //
