@@ -1,6 +1,6 @@
 
-Project libJsonX
-Copyright (C) 2015  tania@df9ry.de
+Project ADIF2XML
+Copyright (C) 2021  tania@df9ry.de
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -17,6 +17,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ------------------------------------------------------------------------
 
-Release 0.2.0 as of 2020-02-04, DF9RY - Tania (Tania@DF9RY.de)
+Release 0.0.1 as of 2021-04-18, DF9RY - Tania (Tania@DF9RY.de)
 
-JSON support.
+------------------------------------------------------------------------
+
+This project is in development. Its purpose is the export of ADIF files
+to XML, from where it can be transformed with standard XML tools and
+then either direct or by using a XML2??? tool into another format.
+Most wanted is the generation of EDI files, that can not be generated
+yet by any free utility, so far I know.
+
+Currently the QSO lines for EDI files are generated directly, but this
+will be removed as soon as XML export is implemented.
+
+XML transformation files can then tailored to any logbook program. For
+this program is a pure commandline tool and written with the greates
+portability for each and ever platform, it should be no problem to
+incorporate it into any program if the author of this program like to
+do so.
+
+I understand the wish to earn money with selling of closed source
+logbook programs, but this is not what is my understanding of ham
+spirit. So, every bit of code I write for the hamradio community
+shall, and will, be GPLed.
+
+If you welcome this approach I will be glad to hear from you.
+
+CU, 73, de Tania, DF9RY
+
+------------------------------------------------------------------------
+
