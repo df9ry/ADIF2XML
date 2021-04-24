@@ -3,6 +3,21 @@
 namespace ADIFIO
 {
 
+static const std::map<Object::ObjectType, std::string> object_type_map {
+    { Object::ObjectType::NIL,    "nil"    },
+    { Object::ObjectType::BOOL,   "bool"   },
+    { Object::ObjectType::DATE,   "date"   },
+    { Object::ObjectType::DOUBLE, "double" },
+    { Object::ObjectType::INT,    "int"    },
+    { Object::ObjectType::TIME,   "time"   },
+    { Object::ObjectType::STRING, "string" }
+};
+
+std::string Object::getObjectTypeName(ObjectType ot) {
+    auto iter{object_type_map.find(ot)};
+    return (iter != object_type_map.end()) ? iter->second : "undefined";
+}
+
 TypeDictionary_t defaultTypes {
     { "ADIF_VER",                    Type::String },
     { "CREATED_TIMESTAMP",           Type::String },

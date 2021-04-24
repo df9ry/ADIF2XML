@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(ADIF2XML
-    VERSION     1.0.0
+    VERSION     1.0.1
     DESCRIPTION "COnvert ADIF logfiles to XML")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -19,16 +19,23 @@ link_directories(BEFORE "${CMAKE_INSTALL_PREFIX}/lib/")
 set(ADIF2XML_SOURCES
     adifio.cpp
     adif2xml.cpp
+    attributeimpl.cpp
+    attributelistimpl.cpp
     ediio.cpp
     getopt.c
+    SAXPrintHandlers.cpp
 )
 
 set(ADIF2XML_HEADERS
     adifio.hpp
     adif2xml.hpp
+    attributeimpl.hpp
+    attributelistimpl.hpp
     date/date.h
     ediio.hpp
     getopt.h
+    SAXPrint.hpp
+    SAXPrintHandlers.hpp
 )
 
 add_executable(ADIF2XML ${ADIF2XML_SOURCES} ${ADIF2XML_HEADERS})

@@ -76,6 +76,8 @@ namespace ADIFIO
             NIL, BOOL, DATE, DOUBLE, INT, TIME, STRING
         } ObjectType_t;
 
+        static std::string getObjectTypeName(ObjectType ot);
+
         Object(): type{ObjectType::NIL}
         {
             pointer.reset();
@@ -273,7 +275,7 @@ namespace ADIFIO
                     if ((hour >= 24) || (min >= 60) || (sec >= 60)) {
                         throw ::std::runtime_error("Invalid time value: \"" + value + "\"");
                     }
-                 long count{hour * 24 * 60 + min * 60 + sec};
+                    long count{hour * 24 * 60 + min * 60 + sec};
                     std::chrono::seconds s(count);
                     return Object(s);
                 }
